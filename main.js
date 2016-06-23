@@ -19,6 +19,7 @@ function initializeClock(id, endtime) {
   var hoursSpan = clock.querySelector('.hours');
   var minutesSpan = clock.querySelector('.minutes');
   var secondsSpan = clock.querySelector('.seconds');
+  var test = clock.querySelector('.test')
 
   function updateClock() {
     var t = getTimeRemaining(endtime);
@@ -27,6 +28,7 @@ function initializeClock(id, endtime) {
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    test.innerHTML = deadline
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
