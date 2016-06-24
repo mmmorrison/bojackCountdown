@@ -61,5 +61,6 @@ h1{
 	border: 50px solid transparent;
 	border-top: 70px solid #F8F4E8;
 }
-.diamond{
+a{
+	text-decoration: none;
 }
