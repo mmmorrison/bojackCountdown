@@ -4,6 +4,14 @@ function getTimeRemaining(endtime) {
   var minutes = Math.floor((t / 1000 / 60) % 60);
   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
   var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var firefoxDays = 1469145600000 - Date.now()
+
+  // console.log(Date.now());
+  // console.log(new Date());
+  // console.log('*******');
+  // console.log(days);
+  // console.log(t);
+  console.log(firefoxDays);
   return {
     'total': t,
     'days': days,
@@ -28,7 +36,7 @@ function initializeClock(id, endtime) {
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-    test.innerHTML = t;
+    test.innerHTML = t[0];
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
