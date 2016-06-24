@@ -28,6 +28,8 @@ function initializeClock(id, endtime) {
   var minutesSpan = clock.querySelector('.minutes');
   var secondsSpan = clock.querySelector('.seconds');
   var test = clock.querySelector('.test')
+  var firefoxDays = 1469145600000 - Date.now()
+
 
   function updateClock() {
     var t = getTimeRemaining(endtime);
@@ -36,7 +38,7 @@ function initializeClock(id, endtime) {
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-    test.innerHTML = t[0];
+    test.innerHTML = firefoxDays
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
